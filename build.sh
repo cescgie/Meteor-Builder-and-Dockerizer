@@ -16,16 +16,29 @@
     echo "======================="
     echo "This is meteor project!"
     echo "======================="
-    read -p "Docker username: (cescgie)?" username
-    username=${username:-cescgie}
-    echo $username
 
-    read -p "Name for new docker image: (rocketchat)?" name
-    name=${name:-rocketchat}
-    echo $name
+    while [[ $username == '' ]] 
+    do
+      read -p "Docker username:" username
+      if [[ -z "$username" ]]; then
+        echo "No input. Try again!"
+      else
+        echo $username
+      fi
+    done
 
-    read -p "Tag: (develop)?" tag
-    tag=${tag:-develop}
+    while [[ $name == '' ]] 
+    do
+      read -p "Name for docker image:" name
+      if [[ -z "$name" ]]; then
+        echo "No input. Try again!"
+      else
+        echo $name
+      fi
+    done  
+
+    read -p "Tag: (latest)?" tag
+    tag=${tag:-latest}
     echo $tag
     
     currentFolder="${PWD##*/}"
