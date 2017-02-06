@@ -44,8 +44,8 @@
     currentFolder="${PWD##*/}"
 
     build_folder="$currentFolder-build"
-    if [ ! -d $build_folder ]; then
-      mkdir -p $build_folder;
+    if [ ! -d "../$build_folder" ]; then
+      mkdir -p "../$build_folder";
     fi
     
     echo "=========================="
