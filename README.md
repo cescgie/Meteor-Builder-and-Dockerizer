@@ -1,11 +1,11 @@
 # Meteor Builder and Dockerizer
 Bash script to build and dockerize meteor project
 
-<h3>Requirements</h3>
- - [Meteor](https://www.meteor.com/)
- - [Docker](https://www.docker.com/)
+## Requirements
+ * [Meteor](https://www.meteor.com/)
+ * [Docker](https://www.docker.com/)
 
-<h3>Installation</h3>
+## Installation
 Put this interactive script in root folder of your meteor project and start it by running:
 ```bash
 $ ./build.sh
